@@ -1,0 +1,8 @@
+.ProseMirror {
+    height: 82.5vh;
+    background-color: beige;
+    width: calc(100% - 0.5rem);
+    margin: 0.5rem 0.5rem 0.5rem 0.75rem;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+}

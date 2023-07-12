@@ -1,0 +1,87 @@
+.user-profile {
+    position: relative;
+    display: inline-block;
+}
+
+.user-profile-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 0.5rem;
+}
+
+.user-profile-button span {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+}
+
+.user-profile-picture {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-profile-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-profile-modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: auto;
+    position: relative;
+}
+
+.user-profile-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.user-profile-modal p {
+    margin: 0.5rem 0;
+}
+
+.user-profile-modal img {
+    max-width: 100%;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+}
+
+.user-profile-logout-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.user-profile-logout-button button {
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.user-profile-logout-button button:hover {
+    background-color: #555;
+}

@@ -1,0 +1,62 @@
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-logout-button-container {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+}
+
+.google-login-button {
+    background-color: #fff;
+    color: #333;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 5px 0px;
+}
+
+.google-login-button:hover {
+    background-color: #f2f2f2;
+}
+
+.user-profile-button {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile-button button {
+    background-color: transparent;
+    color: #333;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    opacity: 0.8;
+}
+
+.user-profile-button button:hover {
+    opacity: 1;
+}
+
+.iframe-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    overflow: hidden;
+}

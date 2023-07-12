@@ -1,0 +1,14 @@
+.message-container {
+    padding-top: 3rem;
+    /* width:67%; */
+}
+
+.message {
+    width: 67%;
+    font-family: var(--font-family);
+}
+
+.chat-container {
+    height: 87vh;
+    /* overflow: auto; */
+}

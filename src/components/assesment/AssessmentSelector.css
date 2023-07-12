@@ -1,0 +1,66 @@
+/* Set up styles for the assessment selector container */
+.assessment-selector {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    height: 80vh;
+}
+
+/* Style the heading */
+.assessment-selector h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Style the list of topics */
+.assessment-selector ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 450px;
+    height: 100%;
+    /* set a fixed height */
+    overflow-y: scroll;
+    /* add the scroll property */
+}
+
+/* Style each topic item */
+.assessment-selector li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    width: 90%;
+    /* set the default font size */
+    transition: font-size 0.3s ease;
+    /* add a smooth transition effect */
+}
+
+/* Style the topic buttons */
+.assessment-selector button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #FCFFFD;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Change the background color of the button on hover or focus */
+.assessment-selector button:hover,
+.assessment-selector button:focus {
+    background-color: #D9BBF9;
+    font-size: 1.2rem;
+}
+
+/* Add some margin to the top of the first topic item */
+.assessment-selector .assessment:first-of-type {
+    margin-top: 2rem;
+}
+
+/* Increase the font size of each topic item on hover */
+.assessment-selector li:hover {
+    font-size: 1.4rem;
+}

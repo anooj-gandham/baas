@@ -1,0 +1,223 @@
+.home-panel {
+    display: flex;
+    height: 100vh
+}
+
+.side-panel {
+    width: 20%;
+    background-color: #383535;
+    border-radius: 20px 0 0 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    overflow: hidden
+}
+
+.side-panel-inner {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.side-panel-top-logo {
+    margin-bottom: 20px
+}
+
+.side-panel-top-logo img {
+    height: 40px
+}
+
+.side-panel-top-search {
+    margin-bottom: 20px
+}
+
+.side-panel-top-search input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    background-color: #444;
+    color: #fff
+}
+
+.side-panel-menu {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column
+}
+
+.side-panel-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all .2s ease
+}
+
+.side-panel-menu-item:hover {
+    background-color: #555;
+}
+
+.side-panel-icon-img {
+    height: 2rem;
+    margin-right: 1rem
+}
+
+.icon-text {
+    font-size: 18px;
+    color: #fff
+}
+
+.side-panel-footer {
+    margin-top: auto;
+    padding: 20px;
+    background-color: #444;
+    color: #fff;
+    align-items: flex-end;
+    display: flex;
+}
+
+.side-panel-footer-user {
+    display: flex;
+    align-items: center;
+    font-size: 14px
+}
+
+.side-panel-footer-user-icon {
+    margin-right: 10px
+}
+
+.side-panel-footer-user-details-email {
+    font-weight: bold;
+    margin-left: 5px
+}
+
+.main-panel {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto
+}
+
+.main-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px
+}
+
+.main-panel-header-title h1 {
+    font-size: 24px;
+    color: #fff
+}
+
+.main-panel-header-search input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    background-color: #444;
+    color: #fff
+}
+
+.main-panel-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px
+}
+
+.main-panel-body-card {
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    background-color: #333;
+    height: 100%;
+}
+
+.main-panel-body-card-content {
+    background-color: #333;
+    height: 100%;
+    display: flex;
+    flex-direction: column
+}
+
+.main-panel-body-card-title h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #fff
+}
+
+.main-panel-body-card-author h3 {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px
+}
+
+.main-panel-body-card-cover img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px
+}
+
+.main-panel-body-card-description p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 10px
+}
+
+.main-panel-body-card-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding: 10px 20px;
+    background-color: #444;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px
+}
+
+.main-panel-body-card-actions-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.main-panel-body-card-actions-item:hover {
+    transform: translateY(-2px);
+}
+
+.main-panel-body-card-actions-item button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.main-panel-body-card-actions-item button:hover {
+    background-color: #F6F8F2;
+}
+
+.main-panel-body-card-actions-item img {
+    height: 20px;
+    margin-right: 10px
+}
+
+.main-panel-body-card-actions-item {
+    font-size: 14px
+}
+
+.home-panel {
+    background-color: #222;
+    color: #fff
+}
