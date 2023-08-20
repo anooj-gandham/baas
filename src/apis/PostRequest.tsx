@@ -8,11 +8,8 @@ export const postRequest = async (
     url: string,
     options?: PostRequestOptions
 ): Promise<any> => {
-    const { headers = {}, body = null, queryParams = {} } = options || {};
-
-    const query = new URLSearchParams(queryParams);
-
-    const response = await fetch(`${url}?${query}`, {
+    const { headers = {}, body = null} = options || {};
+    const response = await fetch(`${url}`, {
         method: "POST",
         headers: {
             Accept: "application/json",
@@ -28,7 +25,7 @@ export const postRequest = async (
     }
 
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
 
     return data;
 };

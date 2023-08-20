@@ -11,7 +11,7 @@ type GetRequestOptions = {
   
     const query = new URLSearchParams(queryParams);
   
-    const response = await fetch(`${url}?${query}`, {
+    const response = await fetch(`${url}`, {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",

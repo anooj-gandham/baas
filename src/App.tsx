@@ -10,7 +10,7 @@ import Temp from './pages/temp/Temp';
 import './App.css';
 
 const App: React.FC = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   return (
     <GoogleOAuthProvider

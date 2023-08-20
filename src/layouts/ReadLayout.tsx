@@ -15,13 +15,13 @@ interface ReadLayoutProps {
 
 const ReadLayout: React.FC<ReadLayoutProps> = ({ Topbar, Reader, Workspace, stateManager }) => {
 
-    console.log("showWorkspace");
-    console.log(stateManager?.state.uiState.showWorkspace)
+    // console.log("showWorkspace");
+    // console.log(stateManager?.state.uiState.showWorkspace)
     const [showWorkspace, setShowWorkspace] = useState<boolean>(stateManager?.state.uiState.showWorkspace || true);
     const [splitPosition, setSplitPosition] = useState(stateManager?.state.uiState.splitPosition || [70, 30]);
 
-    console.log("showWorkspace");
-    console.log(showWorkspace);
+    // console.log("showWorkspace");
+    // console.log(showWorkspace);
 
     const handleToggleWorkspace = () => {
         setShowWorkspace(!showWorkspace);

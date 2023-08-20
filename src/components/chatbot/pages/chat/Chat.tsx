@@ -72,16 +72,16 @@ const Chat = ({ stateManager }: ChatProps) => {
                     suggestFollowupQuestions: useSuggestFollowupQuestions
                 }
             };
-            console.log("request", request);
-            console.log(economicsurvey["63"])
-            console.log(economicsurvey[63])
+            // console.log("request", request);
+            // console.log(economicsurvey["63"])
+            // console.log(economicsurvey[63])
             if (question.includes("Please summarize the concepts in page")) {
                 const pageNumber = question.split(" ").pop();
                 const pageNumberAsNumber = Number(pageNumber) - 1;
                 if (!isNaN(pageNumberAsNumber)) {
                     const page = economicSurveyData[pageNumberAsNumber.toString()];
                     if (page) {
-                        console.log("page", page);
+                        // console.log("page", page);
                         const result: AskResponse = {
                             answer: page.explanations.join("\n\n"),
                             thoughts: null,

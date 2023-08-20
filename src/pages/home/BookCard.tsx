@@ -13,6 +13,9 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
     const navigate = useNavigate();
 
     const handleReadClick = (book: BookProps) => {
+        // console.log(book)
+        // // Set the bookId in cookies
+        // document.cookie = `bookId=${book.id}`;
         localStorage.setItem('bookId', book.id.toString());
         navigate('/read');
     }
@@ -39,9 +42,9 @@ const BookCard: React.FC<BookCardProps> = ({ book }) => {
                     >
                         <span className="icon-text">Read</span>
                     </div>
-                    <div className="main-panel-body-card-actions-item">
+                    {/* <div className="main-panel-body-card-actions-item">
                         <img src="/static/icons/favourite.svg" alt="Favourite" className="navbar-icon-img" />
-                    </div>
+                    </div> */}
                 </div>
             </CardContent>
         </Card>

@@ -1,0 +1,179 @@
+.
+├── App.css
+├── App.test.tsx
+├── App.tsx
+├── apis
+│   ├── GetRequest.tsx
+│   └── PostRequest.tsx
+├── components
+│   ├── assesment
+│   │   ├── Assessment.css
+│   │   ├── Assessment.tsx
+│   │   ├── AssessmentSelector.css
+│   │   ├── AssessmentSelector.tsx
+│   │   ├── AssessmentTopics.tsx
+│   │   └── SampleAssessment.tsx
+│   ├── chatbot
+│   │   ├── ChatGptWrapper.tsx
+│   │   ├── Chatbot.css
+│   │   ├── Chatbot.js
+│   │   ├── SampleChats.js
+│   │   ├── api
+│   │   │   ├── api.ts
+│   │   │   ├── index.ts
+│   │   │   └── models.ts
+│   │   ├── assets
+│   │   │   ├── github.svg
+│   │   │   └── search.svg
+│   │   ├── components
+│   │   │   ├── AnalysisPanel
+│   │   │   │   ├── AnalysisPanel.module.css
+│   │   │   │   ├── AnalysisPanel.tsx
+│   │   │   │   ├── AnalysisPanelTabs.tsx
+│   │   │   │   └── index.tsx
+│   │   │   ├── Answer
+│   │   │   │   ├── Answer.module.css
+│   │   │   │   ├── Answer.tsx
+│   │   │   │   ├── AnswerError.tsx
+│   │   │   │   ├── AnswerIcon.tsx
+│   │   │   │   ├── AnswerLoading.tsx
+│   │   │   │   ├── AnswerParser.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── ClearChatButton
+│   │   │   │   ├── ClearChatButton.module.css
+│   │   │   │   ├── ClearChatButton.tsx
+│   │   │   │   └── index.tsx
+│   │   │   ├── Example
+│   │   │   │   ├── Example.module.css
+│   │   │   │   ├── Example.tsx
+│   │   │   │   ├── ExampleList.tsx
+│   │   │   │   └── index.tsx
+│   │   │   ├── QuestionInput
+│   │   │   │   ├── QuestionInput.module.css
+│   │   │   │   ├── QuestionInput.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── SettingsButton
+│   │   │   │   ├── SettingsButton.module.css
+│   │   │   │   ├── SettingsButton.tsx
+│   │   │   │   └── index.tsx
+│   │   │   ├── SupportingContent
+│   │   │   │   ├── SupportingContent.module.css
+│   │   │   │   ├── SupportingContent.tsx
+│   │   │   │   ├── SupportingContentParser.ts
+│   │   │   │   └── index.ts
+│   │   │   └── UserChatMessage
+│   │   │       ├── UserChatMessage.module.css
+│   │   │       ├── UserChatMessage.tsx
+│   │   │       └── index.ts
+│   │   └── pages
+│   │       ├── NoPage.tsx
+│   │       ├── chat
+│   │       │   ├── Chat.module.css
+│   │       │   └── Chat.tsx
+│   │       ├── layout
+│   │       │   ├── Layout.module.css
+│   │       │   └── Layout.tsx
+│   │       └── oneshot
+│   │           ├── OneShot.module.css
+│   │           └── OneShot.tsx
+│   ├── data
+│   │   ├── PagewiseSummary.tsx
+│   │   ├── StateContext.tsx
+│   │   ├── StateManager.tsx
+│   │   ├── annotations.xml
+│   │   ├── economicsurvey.json
+│   │   └── state.json
+│   ├── navbar
+│   │   ├── Navbar.css
+│   │   └── Navbar.tsx
+│   ├── notes
+│   │   ├── TextEditor.css
+│   │   ├── TextEditor.tsx
+│   │   └── TextEditorToolbar.tsx
+│   ├── pdf
+│   │   ├── DisabledPdfElements.js
+│   │   ├── IconMap.js
+│   │   ├── PdfViewer.css
+│   │   └── PdfViewer.tsx
+│   └── ui
+│       ├── UserProfile
+│       │   ├── UserProfile.css
+│       │   └── UserProfile.tsx
+│       ├── icon
+│       │   ├── MyCustomIcon.tsx
+│       │   └── MyIcon.tsx
+│       └── icons
+│           ├── Logo.ico
+│           ├── bold.svg
+│           ├── comments.svg
+│           ├── copyContent.svg
+│           ├── delete.svg
+│           ├── deleteSweep.svg
+│           ├── favourite.svg
+│           ├── findInPage.svg
+│           ├── formatCenterAlign.svg
+│           ├── formatLeftAlign.svg
+│           ├── formatRightAlign.svg
+│           ├── h1.svg
+│           ├── h2.svg
+│           ├── h3.svg
+│           ├── h4.svg
+│           ├── heading.svg
+│           ├── highlight.svg
+│           ├── home.svg
+│           ├── horizontalRule.svg
+│           ├── indentDecrease.svg
+│           ├── indentIncrease.svg
+│           ├── italic.svg
+│           ├── leftPanel.svg
+│           ├── menu.svg
+│           ├── minimizeRightPanel.svg
+│           ├── newComment.svg
+│           ├── notes.svg
+│           ├── pageByPage.svg
+│           ├── pageContinuous.svg
+│           ├── pageSettings.svg
+│           ├── pageSummarizer.svg
+│           ├── palette.svg
+│           ├── send.svg
+│           ├── settings.svg
+│           ├── sparkle.svg
+│           ├── strikethrough.svg
+│           ├── tag.svg
+│           ├── textExplainer.svg
+│           ├── textbook.svg
+│           ├── underline.svg
+│           ├── underlineSquiggle.svg
+│           ├── user.svg
+│           ├── zoomIn.svg
+│           └── zoomOut.svg
+├── index.css
+├── index.tsx
+├── layouts
+│   ├── Layout.css
+│   ├── ReadLayout.css
+│   └── ReadLayout.tsx
+├── logo.svg
+├── pages
+│   ├── home
+│   │   ├── BookCard.tsx
+│   │   ├── Home.css
+│   │   ├── Home.tsx
+│   │   ├── SampleBooks.tsx
+│   │   └── Sidepanel.tsx
+│   ├── landing
+│   │   ├── Landing.css
+│   │   └── Landing.tsx
+│   ├── read
+│   │   ├── Read.css
+│   │   └── Read.tsx
+│   └── temp
+│       ├── Temp.css
+│       ├── Temp.tsx
+│       ├── TextEditor.js
+│       └── temp.html
+├── react-app-env.d.ts
+├── reportWebVitals.ts
+└── setupTests.ts
+
+34 directories, 143 files

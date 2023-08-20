@@ -5,7 +5,6 @@ import { User } from '../../components/ui/UserProfile/UserProfile';
 import { postRequest } from '../../apis/PostRequest';
 import './Landing.css';
 
-
 interface LandingProps {
     isAuthenticated: boolean;
     setIsAuthenticated: (isAuthenticated: boolean) => void;
@@ -24,17 +23,16 @@ const decodeJwt = (token: string) => {
     return user;
 };
 
-
 const Landing: React.FC<LandingProps> = ({ isAuthenticated, setIsAuthenticated }) => {
 
     const [user, setUser] = useState<User | null>(null);
 
     const successLogin = async (response: any) => {
-        console.log(response);
+        // console.log(response);
         const jwt = await response.credential;
         const user = decodeJwt(jwt);
 
-        postRequest(process.env.REACT_APP_API_URL + "/users/validate",
+        postRequest(process.env.REACT_APP_API_URL + "/api/v1/users/validate",
             {
                 body: {
                     userId: user.id,
@@ -44,29 +42,35 @@ const Landing: React.FC<LandingProps> = ({ isAuthenticated, setIsAuthenticated }
             .then((data: any) => {
                 console.log(data);
                 if (data.validated) {
-                    console.log("User validated");
+                    // console.log("User validated");
                     const expires = new Date();
                     expires.setDate(expires.getDate() + 10);
                     document.cookie = `jwt=${jwt}; expires=${expires.toUTCString()}`;
-                    console.log(user);
+                    document.cookie = `userId=${user.id}; expires=${expires.toUTCString()}`; // Set userId to cookie
+                    // console.log(user);
                     setUser(user);
                     setIsAuthenticated(true);
+                    
+                    // redirect to home page
+                    window.location.href = "/home";
                 }
                 else {
-                    console.log("User not validated");
+                    // console.log("User not validated");
                     window.alert("The user is not registed. \nPlease try again with valid login credentials");
                 }
             })
-            .catch((err: any) => console.log(err));
-
+            .catch((err: any) => {
+                console.log(err)
+            });
     };
 
     const errorLogin = () => {
-        console.log('Login Failed');
+        console.error('Login Failed');
     };
 
     const handleLogout = () => {
         document.cookie = 'jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        document.cookie = 'userId=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'; // Clear userId from cookie
         setIsAuthenticated(false);
         setUser(null);
     };
@@ -87,11 +91,25 @@ const Landing: React.FC<LandingProps> = ({ isAuthenticated, setIsAuthenticated }
         return null;
     };
 
+    const getUserIdFromCookie = () => {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.startsWith('userId=')) {
+                return cookie.substring('userId='.length, cookie.length);
+            }
+        }
+        return null;
+    };
+
     useEffect(() => {
         const jwt = getJwt();
-        if (jwt) {
+        const userIdFromCookie = getUserIdFromCookie();
+
+        if (jwt && userIdFromCookie) {
             setIsAuthenticated(true);
             const user = decodeJwt(jwt);
+            user.id = userIdFromCookie;  // Set the user's id from the cookie
             setUser(user);
         }
     }, []);

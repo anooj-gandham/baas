@@ -119,7 +119,7 @@ const CustomTextAlignmentButtonGroup = () => {
                         path='/static/icons/formatLeftAlign.svg'
                         height='1rem' />}
                     displayShortcut={false}
-                    onClick={() => console.log('Left')}
+                    // onClick={() => console.log('Left')}
                 />
                 <CommandMenuItem
                     commandName='centerAlign'

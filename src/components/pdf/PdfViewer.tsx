@@ -26,6 +26,7 @@ const PdfViewer = React.memo(({ stateManager }: PdfViewerProps) => {
                 initialDoc: stateManager.state.pdfFileUrl,
                 // initialDoc: '/pdfs/0410100.pdf',
                 // initialDoc: '/pdfs/Document1.pdf',
+                // licenseKey: 'demo',
                 disabledElements: disabledPdfElements,
             },
             viewer.current as HTMLElement,
@@ -41,7 +42,7 @@ const PdfViewer = React.memo(({ stateManager }: PdfViewerProps) => {
                     title: 'Summarize the page',
                     dataElement: 'page-summarizer',
                     onClick: () => {
-                        console.log(stateManager.state.chatbot.makeApiRequest);
+                        // console.log(stateManager.state.chatbot.makeApiRequest);
                         stateManager.state.chatbot.makeApiRequest('Please summarize the concepts in page ' + stateManager.state.pageNumber);
                     },
                 },

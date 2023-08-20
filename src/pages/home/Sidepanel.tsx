@@ -1,6 +1,28 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
+import { getJwt, decodeJwt } from '../../utils/jwt';
+import { User } from '../../components/ui/UserProfile/UserProfile';
 
-const Sidepanel = () => {
+const Sidepanel: React.FC = () => {
+    const [user, setUser] = useState<User>({
+        id: "",
+        name: "",
+        email: "",
+        picture: ""
+    });
+
+    useEffect(() => {
+        // Get jwt from cookies
+        const jwt = getJwt();
+        
+        // Decode jwt
+        if (jwt) {
+            setUser(decodeJwt(jwt));
+        } else {
+            // redirect to login page
+            window.location.href = "/";
+        }
+    }, []);  // Empty dependency array ensures this runs once when component mounts
+
     return (
         <div className="side-panel">
             <div className="side-panel-inner">
@@ -27,13 +49,13 @@ const Sidepanel = () => {
                 <div className="side-panel-footer">
                     <div className="side-panel-footer-user">
                         <div className="side-panel-footer-user-icon">
-                            <img src="/static/icons/user.svg" alt="" className="side-panel-icon-img" />
+                            <img src={user.picture} alt="User Profile" className="side-panel-icon-img" />
                         </div>
                         <div className="side-panel-footer-user-details">
-                            <div>Username: John Doe</div>
-                            <div>Email:
+                            <div>{user.name}</div>
+                            <div>
                                 <span className="side-panel-footer-user-details-email">
-                                    john@aaa.com
+                                    {user.email}
                                 </span>
                             </div>
                         </div>
